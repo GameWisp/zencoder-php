@@ -33,6 +33,6 @@ class Services_Zencoder_Outputs extends Services_Zencoder_Base
    * @return Services_Zencoder_Progress The object representation of the resource
    */
   public function progress($output_id, $params = array()) {
-    return new Services_Zencoder_Progress($this->proxy->retrieveData("outputs/$output_id/progress.json", array(), $params));
+    return new Services_Zencoder_Progress($this->proxy->retrieveData("outputs/$output_id/progress.json", $params, array()));
   }
 }
